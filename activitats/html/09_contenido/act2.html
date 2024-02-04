@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Smartphones</title>
+
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Buscador de Smartphones</h1>
+
+    <form id="searchForm">
+        <label for="brand">Marca:</label>
+        <input type="text" id="brand" placeholder="Escribe la marca" autocomplete="off">
+
+        <label for="priceRange">Rango de Precio:</label>
+        <select id="priceRange">
+            <option value="0-200"> 0 - 200 EUR</option>
+            <option value="201-400"> 201 - 400 EUR</option>
+            <option value="401-600"> 401 - 600 EUR</option>
+            <option value="601-800"> 601 - 800 EUR</option>
+            <option value="801"> Más de 800 EUR</option>
+        </select>
+
+        <button type="button" onclick="search()">Buscar</button>
+    </form>
+
+    <script>
+        // Datos de ejemplo para las marcas
+        const marcas = ["Apple", "Samsung", "Google", "OnePlus", "Xiaomi", "Huawei", "Sony", "LG"];
+
+        // Configuración del autocompletado 
+        const brandInput = document.getElementById('brand');
+        new Awesomplete(brandInput, { list: marcas});
+
+        // Función de busqueda (puedes modificarla según tus necesidades)
+        function search() {
+            const brand = brandInput.value;
+            const priceRange = document.getElementById('priceRange').value;
+
+            // Puedes realizar la búsqueda y mostrar los resultados aquí
+            alert('Busqueda: Marca -${brand}, Rango de Precios - ${priceRange}');
+        }
+    </script>
+
+</body>
+</html>
