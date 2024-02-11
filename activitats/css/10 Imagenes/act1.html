@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        body {
+            font-family: Araial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .message {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .sender-info {
+            flex-grow: 1;
+        }
+        .name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .date {
+            font-size: 15px;
+            color: #5500ff;
+        }
+        .message-text {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .user1 {
+            background-color: #00ff3c;
+        }
+        .user2 {
+            background-color: #2bbe41;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="chat-container">
+            <div class="message user1">
+                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/640px-User_icon_2.svg.png" alt="Avatar Usuario 1">
+                <div class="sender-info">
+                    <div class="name">Usuario 1</div>
+                    <div class="date">10 de marzo 2023</div>
+                </div>
+                <div class="message-text">
+                    ¡Hola! ¿Cómo estás?
+                </div>
+            </div>
+            
+            <div class="message user2">
+                <img class="avatar" src="https://cdn.icon-icons.com/icons2/739/PNG/512/user-2_icon-icons.com_63313.png" alt="Avatar Usuario 2">
+                <div class="sender-info">
+                    <div class="name">Usuario 2</div>
+                   <div class="date">15 de marzo 2023</div>
+                   </div>
+            </div>
+            </div>
+                
+    </body>
+    </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            color: #000000;
+        }
+
+        h1 {
+            color:#001eff;
+        }
+
+        #comment-form {
+            margin-top: 25px;
+        }
+
+        #comment-list {
+            margin-top: 40px;
+            border-top: 1px solid #000000;
+            padding-top: 10px;
+        }
+
+        .comment {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #000000;
+            background-color: #f9f9f9;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .comment-date {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Juegos</h1>
+
+    <div id="comment-form">
+        <h2> Deja tu Comentario sobre los Juegos</h2>
+        <form id="commentForm">
+            <label for="author">Nombre:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="comment">Comentario:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+
+            <button type="submit">Enviar Comentario</button>
+            </form>
+    </div>
+
+    <div id="comment-list">
+        <h2>Comentarios</h2>
+        <div class="comment">
+            <p class="comment-author">Nombre del Usuario</p>
+            <p class="comment-date">Fecha y Hora de la publicació del Comentario</p>
+            <p>Contenido del Comentario sobre de los Juegos</p>
+        </div>
+    </div>
+</body>
+</html>
