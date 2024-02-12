@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augmento Tamaño</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .modal:hover {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal">
+        <div class="modal-content">
+            <p>Contenido Modal</p>
+    </div>
+</div>
+
+<button onclick="mostrarModal()">Mostrar Modal</button>
+
+<script>
+    function mostrarModal(){
+        document.querySelector('.modal').style.display = 'block'
+    }
+</script>
+
+</body>
+</html>
