@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+
+        .contenedor-imagen {
+            perspective: 1000px;
+        }
+
+        .imagen-3D {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .imagen-3D::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 255, 0.3);
+            transform: translateZ(-20px);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .imagen-3D:hover {
+            transform: rotateY('30deg') rotateX('-20deg');
+        }
+
+        .imagen-3D:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-imagen">
+        <div class="imagen-3D">
+            <img src="Imagenes/descarga.png" alt="imagen-3D">
+        </div>
+    </div>
+</body>
+</html>

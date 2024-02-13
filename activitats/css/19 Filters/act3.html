@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciculos Interactivos</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        #rojo {
+            background-color: red;
+        }
+
+        #azul {
+            background-color: blue;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="rojo" class="circulo"></div>
+    <div id="azul" class="circulo"></div>
+
+    <script>
+        const azul = document.getElementById('azul');
+
+        azul.addEventListener('mouseover', () => {
+            azul.style.left= '-50px'
+        });
+
+        azul.addEventListener('mouseout', () => {
+            azul.style.left = '0';
+        });
+        </script>
+</body>
+</html>
