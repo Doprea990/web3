@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulos de Colores</title>
+    <style>
+        .contenedor-circulos {
+            display: flex;
+            align-items: center;
+        }
+
+        .circulo-rojo,
+        .circulo-azul {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: margin-left 0.5s ease;
+        }
+
+        .circulo-rojo {
+            background-color: red;
+        }
+
+        .circulo-azul {
+            background-color: rgba(0, 0, 255, 0.5);
+            margin-left: 0;
+        }
+
+        .circulo-azul:hover {
+            margin-left: -50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-circulos">
+        <div class="circulo-rojo"></div>
+        <div class="circulo-azul"></div>
+    </div>
+
+</body>
+</html>
